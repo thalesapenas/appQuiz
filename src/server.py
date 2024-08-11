@@ -17,8 +17,8 @@ middleware = [
     )
 ]
 
-app = FastAPI()
-
+app = FastAPI(middleware=middleware)
+create_database()
 
 # Roteadores para cada seção da API
 alternatives_router = APIRouter(prefix="/alternatives", tags=["Alternatives"])
